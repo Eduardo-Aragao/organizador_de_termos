@@ -44,8 +44,8 @@ def organizar_termos_ativos():
     if contador == 0:
         print("Nenhum termo foi encontrado na pasta de entrada.")
 
-    def organizar_termos_si():
-        if not pasta_destino_si_raiz.exists():
+def organizar_termos_si():
+    if not pasta_destino_si_raiz.exists():
         pasta_destino_si_raiz.mkdir(parents=True, exist_ok=True)
     if not pasta_invalidos_si.exists():
         pasta_invalidos_si.mkdir(parents=True, exist_ok=True)
