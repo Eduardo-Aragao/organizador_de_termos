@@ -1,4 +1,20 @@
+# Variáveis de ambiente (contém caminhos sensíveis)
 .env
+
+# Python
 __pycache__/
 *.pyc
-src/__pycache__/
+*.pyo
+*.pyd
+.Python
+*.egg-info/
+dist/
+build/
+
+# Virtual environment
+venv/
+.venv/
+
+# IDE
+.vscode/
+.idea/
