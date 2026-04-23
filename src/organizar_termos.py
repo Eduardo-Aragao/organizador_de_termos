@@ -1,13 +1,6 @@
 import shutil
 from pathlib import Path
-
-
-'''LEMBRETE: CONFIGURAR OS CAMINHOS CONFORME O SERVIDOR DE PASTAS'''
-pasta_entrada = Path(r"C:\Users\eduardo.silva\Desktop\Teste de RPA")
-pasta_destino_ativos_raiz = Path(r"C:\Users\eduardo.silva\Desktop\DEPARTAMENTOS")
-pasta_invalidos_ativos = pasta_destino_ativos_raiz / "INVALIDOS"
-pasta_destino_si_raiz = Path(r"C:\Users\eduardo.silva\Desktop\SI")
-pasta_invalidos_si = pasta_destino_si_raiz / "INVALIDOS"
+from .config import pasta_entrada, pasta_destino_ativos_raiz, pasta_invalidos_ativos, pasta_destino_si_raiz, pasta_invalidos_si
 
 
 def organizar_termos_ativos():
