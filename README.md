@@ -1,4 +1,4 @@
-# 🤖 RPA - Organizador de Termos de Responsabilidade (Beta)
+# Organizador de Termos de Responsabilidade (Beta)
 
 <img width="500" height="300" alt="image" src="https://github.com/user-attachments/assets/8fd0f92e-7067-4442-88c6-ca3c75bce6a3" />
 <p></p>
