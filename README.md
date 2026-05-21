@@ -15,6 +15,36 @@ Este projeto consiste em um sistema de **Robotic Process Automation (RPA)** dese
 - **OS & Shutil:** Manipulação de arquivos e diretórios no sistema.
 - **Scripts de Automação:** Lógica para padronização de nomenclatura.
 
+## ⚙️ Configuração local
+Antes de rodar no seu notebook, crie o ambiente virtual e configure as variáveis de ambiente:
+
+1. Crie e ative o virtualenv na raiz do projeto:
+```powershell
+python -m venv venv
+.\venv\Scripts\activate
+```
+2. Instale as dependências:
+```powershell
+python -m pip install -r requirements.txt
+```
+3. Crie um arquivo `.env` na raiz com os caminhos locais das pastas:
+```env
+PASTA_ENTRADA=C:\Users\seunome\Desktop\entrada
+PASTA_INVALIDOS=C:\Users\seunome\Desktop\invalidos
+PASTA_DESTINO_EQUIPAMENTOS=C:\Users\seunome\Desktop\destinos\Destino-Equipamentos
+PASTA_DESTINO_NOTEBOOKS=C:\Users\seunome\Desktop\destinos\Destino-Notebooks
+PASTA_DESTINO_SI=C:\Users\seunome\Desktop\destinos\Destino-SI
+PASTA_BACKUP_EQUIPAMENTOS=C:\Users\seunome\Desktop\backup\Backup-Equipamentos
+PASTA_BACKUP_NOTEBOOKS=C:\Users\seunome\Desktop\backup\Backup-Notebooks
+PASTA_BACKUP_SI=C:\Users\seunome\Desktop\backup\Backup-SI
+```
+4. Execute o projeto usando o script:
+```powershell
+.\executar.bat
+```
+
+> O arquivo `.env` não deve ser commitado. Ele está ignorado pelo `.gitignore`.
+
 ## 🔮 Roadmap & Visão de Futuro (AI Integration)
 O projeto está em constante evolução, com as seguintes implementações planejadas:
 - **OCR & NLP:** Uso de IA para leitura inteligente do conteúdo dos PDFs.
