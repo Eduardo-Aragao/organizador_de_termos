@@ -1,4 +1,4 @@
-from src.organizar_termos import organizar_termos_ativos, organizar_termos_si
+from src.organizar_termos import organizar_termos
 from src.backup_termos import backup_termos
 
 
@@ -21,27 +21,29 @@ def menu():
     while True:
         print_banner()
         print("" + "=" * 60)
-        print(" 1. Organizar termos ativos")
-        print(" 2. Organizar termos SI")
-        print(" 3. Fazer backup")
-        print(" 4. Gerar relatório")
-        print(" 5. Sobre")
+        print(" 1. Organizar termos")
+        print(" 2. Fazer backup")
+        print(" 3. Gerar relatório")
+        print(" 4. Sobre")
         print(" 0. Sair")
         print("" + "=" * 60)
 
         escolha = input("Opção: ").strip()
 
-        if escolha == "1":
-            organizar_termos_ativos()
-        elif escolha == "2":
-            organizar_termos_si()
-        elif escolha == "3":
-            backup_termos()
-        elif escolha == "0":
-            print("Fechando o programa.")
-            break
-        else:
-            print("Opção inválida. Tente novamente.")
+        match escolha: 
+            case "1":
+                organizar_termos()
+            case "2":
+                backup_termos()
+            case "3":
+                print("Gerar relatório - Em desenvolvimento")
+            case "4":
+                print("Sobre - Em desenvolvimento")
+            case "0":
+                print("Saindo... Até logo!")
+                break
+            case _:
+                print("Opção inválida. Tente novamente.")
 
 if __name__ == "__main__":
     menu()
