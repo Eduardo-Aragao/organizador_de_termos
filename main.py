@@ -15,10 +15,41 @@ def print_banner():
     print("""Bem-vindo ao sistema TERMOS.
 Use as opções abaixo para organizar seus arquivos de termos, fazer backup ou gerar relatórios.
 """)
+    
+def limpar_tela():
+    import os
+    os.system('cls' if os.name == 'nt' else 'clear')
+
+def tela_organizar_termos():
+    limpar_tela()
+    print("Organizando termos...")
+    organizar_termos()
+    print("Organização concluída. Pressione Enter para voltar ao menu.")
+    input()
+
+def tela_backup_termos():
+    limpar_tela()
+    print("Fazendo backup dos termos organizados...")
+    backup_termos()
+    print("Backup concluído. Pressione Enter para voltar ao menu.")
+    input()
+
+def tela_gerar_relatorio():
+    limpar_tela()
+    print("Gerar relatório - Em desenvolvimento")
+    print("Pressione Enter para voltar ao menu.")
+    input()
+
+def tela_sobre():
+    limpar_tela()
+    print("Sobre - Em desenvolvimento")
+    print("Pressione Enter para voltar ao menu.")
+    input()
 
 
 def menu():
     while True:
+        limpar_tela()
         print_banner()
         print("" + "=" * 60)
         print(" 1. Organizar termos")
@@ -32,13 +63,13 @@ def menu():
 
         match escolha: 
             case "1":
-                organizar_termos()
+                tela_organizar_termos()
             case "2":
-                backup_termos()
+                tela_backup_termos()
             case "3":
-                print("Gerar relatório - Em desenvolvimento")
+                tela_gerar_relatorio()
             case "4":
-                print("Sobre - Em desenvolvimento")
+                tela_sobre()
             case "0":
                 print("Saindo... Até logo!")
                 break
@@ -46,4 +77,5 @@ def menu():
                 print("Opção inválida. Tente novamente.")
 
 if __name__ == "__main__":
+    limpar_tela()
     menu()
