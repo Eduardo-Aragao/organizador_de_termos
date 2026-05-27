@@ -54,7 +54,7 @@ def menu():
         print_banner()
         print("" + "=" * 60)
         print(" 1. Organizar termos")
-        print(" 2. Fazer backup")
+        print(" 2. backup - Em manutenção")
         print(" 3. Gerar relatório - Em desenvolvimento")
         print(" 4. Sobre")
         print(" 0. Sair")
