@@ -2,7 +2,7 @@ import shutil
 from pathlib import Path
 from .config import pasta_entrada, pasta_invalidos, pasta_destino_equipamentos, pasta_destino_notebooks, pasta_destino_si, pasta_backup_equipamentos, pasta_backup_notebooks, pasta_backup_si
 
-'''Leitura'''
+'''Leitura dos arquivos'''
 def leitura_arquivos():
     arquivos = list(pasta_entrada.rglob("*.pdf"))
     if not arquivos:
@@ -10,7 +10,7 @@ def leitura_arquivos():
     return arquivos
 
 
-'''Fragmentação do nome do arquivo'''
+'''Fragmentação do nome do arquivo através do formato esperado: nome-categoria-setor.pdf'''
 def parse_nome(nome_completo):
     partes = nome_completo.lower().rsplit('-', 2)
     if len(partes) == 3:
@@ -24,7 +24,7 @@ def parse_nome(nome_completo):
 def garantir_pasta(destino):
     destino.mkdir(parents=True, exist_ok=True)
 
-
+'''Responsável por mover os arquivos para o destino correto ou para a pasta de inválidos em caso de erro ou formato incorreto'''
 def mover_arquivo(arquivo, destino):
     garantir_pasta(destino)
     try:
@@ -36,7 +36,7 @@ def mover_arquivo(arquivo, destino):
         shutil.move(str(arquivo), str(pasta_invalidos / arquivo.name))
         print(f"{arquivo.name} movido para INVALIDOS devido ao erro.")
 
-
+'''Função principal para organizar os termos e validar os arquivos de acordo com as categorias e setores pré-definidos'''
 def organizar_termos():
     arquivos  = leitura_arquivos()
     SETORES_VALIDOS = ["abastecimento", "comercial", "compras", "controladoria", "cq", "custos", "diretoria", "dp", "engenharia", "expedição", "ferramentaria",
