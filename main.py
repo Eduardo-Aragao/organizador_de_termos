@@ -42,7 +42,8 @@ def tela_gerar_relatorio():
 
 def tela_sobre():
     limpar_tela()
-    print("Sobre - Em desenvolvimento")
+    print("\nEste projeto consiste em um sistema de Robotic Process Automation (RPA) desenvolvido para otimizar a gestão de documentos digitais do setor de TI. " \
+    "O foco é automatizar a triagem, renomeação e backup de termos de responsabilidade de equipamentos, eliminando o erro humano e o tempo gasto em tarefas repetitivas.\n")
     print("Pressione Enter para voltar ao menu.")
     input()
 
@@ -54,7 +55,7 @@ def menu():
         print("" + "=" * 60)
         print(" 1. Organizar termos")
         print(" 2. Fazer backup")
-        print(" 3. Gerar relatório")
+        print(" 3. Gerar relatório - Em desenvolvimento")
         print(" 4. Sobre")
         print(" 0. Sair")
         print("" + "=" * 60)
